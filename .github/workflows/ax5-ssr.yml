@@ -3,15 +3,11 @@ name: AX5SSR
 on:
   repository_dispatch:
   workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+
 
 env:
 
- REPO_URL: https://github.com/abe520/openwrt-ax5-jdc
+  REPO_URL: https://github.com/abe520/openwrt-ax5-jdc
 #  REPO_URL: https://github.com/jwkinko/openwrt-gl-ax1800
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
