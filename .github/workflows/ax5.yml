@@ -20,9 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/abe520/openwrt-gl-ax1800
-
-
+  REPO_URL: https://github.com/abe520/ax5jdctest
 #  REPO_URL: https://github.com/jwkinko/openwrt-gl-ax1800
 
   REPO_BRANCH: master
