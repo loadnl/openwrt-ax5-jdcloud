@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/abe520/ax5jdctest
+  REPO_URL: https://github.com/coolsnowwolf/openwrt-gl-ax1800
 #  REPO_URL: https://github.com/jwkinko/openwrt-gl-ax1800
 
   REPO_BRANCH: master
@@ -67,10 +67,14 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update Feeds
-      run: cd openwrt && ./scripts/feeds update -a
+      run: |
+        cd openwrt && ./scripts/feeds update -a
+        cd openwrt && ./scripts/feeds update istore
 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
+      run: |
+        cd openwrt && ./scripts/feeds install -a
+        cd openwrt && ./scripts/feeds install -d y -p istore luci-app-store
 
     - name: Load Custom Configuration
       run: |
